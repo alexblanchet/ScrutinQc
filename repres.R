@@ -27,7 +27,6 @@ data$situation <- ifelse(data$unvote > 0 , "Surreprésentation",
                          ifelse(data$unvote == 0, "Équilibre (1 personne = 1 vote)",
                                 "Sous-représentation"))
 
-
 library(ggplot2)
 
 ggplot(data=data, aes(y=unvote, x=region)) +
