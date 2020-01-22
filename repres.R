@@ -29,13 +29,16 @@ data$situation <- ifelse(data$unvote > 0 , "Surreprésentation",
 
 library(ggplot2)
 
-ggplot(data=data, aes(y=unvote, x=region)) +
-  geom_bar(stat = "identity", aes(fill = situation)) + 
-  scale_x_discrete(limits = rev(levels(data$region))) +
-  coord_flip() +
-  ylab("Écart de représentation par rapport à 1 personne = 1 vote") +
-  xlab("Région") +
-  geom_hline(aes(yintercept = 0), colour = "grey") +
-  scale_fill_manual("Situation", values=c("grey", "firebrick1", "steelblue")) +
-  ylim(-0.25, 1) +
-  theme_minimal()
+fig <- ggplot(data=data, aes(y=unvote, x=region)) +
+          geom_bar(stat = "identity", aes(fill = situation)) + 
+          scale_x_discrete(limits = rev(levels(data$region))) +
+          coord_flip() +
+          ggtitle("Représentation des régions du Québec suivant le projet de loi actuel") +
+          ylab("Écart de représentation par rapport à 1 personne = 1 vote") +
+          xlab("Région") +
+          geom_hline(aes(yintercept = 0), colour = "grey") +
+          scale_fill_manual("Situation", values=c("grey", "firebrick1", "steelblue")) +
+          ylim(-0.5, 1.25) +
+          theme_minimal()
+
+ggsave("fig.jpg", fig, width = 20, height = 10, units = "cm")
