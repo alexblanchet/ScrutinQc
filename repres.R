@@ -1,4 +1,4 @@
-# Les données viennent de https://ici.radio-canada.ca/nouvelle/1484171/reforme-mode-scrutin-montreal-regions-quebec-politique
+# Les données viennent de https://cdn-contenu.quebec.ca/cdn-contenu/adm/min/conseil-executif/publications-adm/autres_documents/reforme-scrutin_simulation_.pdf?1579703730
 # Les données sur la densité de population viennent de : http://www.stat.gouv.qc.ca/statistiques/recensement/2011/recens2011_reg/population/poptot_superficie_reg.htm
 
 data <- data.frame(region = c("Gaspésie-Ile-de-la-Madeleine", 
