@@ -1,3 +1,4 @@
+# Les données viennent de https://ici.radio-canada.ca/nouvelle/1484171/reforme-mode-scrutin-montreal-regions-quebec-politique
 data <- data.frame(region = c("Gaspésie-Ile-de-la-Madeleine", 
                               "Bas-Saint-Laurent", 
                               "Chaudière-Appalaches",
