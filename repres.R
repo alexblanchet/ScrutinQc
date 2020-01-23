@@ -89,7 +89,7 @@ fig2 <- ggplot(data=data, aes(y=unvote, x=region)) +
 
 ggsave("fig2.jpg", fig2, width = 20, height = 10, units = "cm")
 
-ggplot(data=data, aes(y=unvote, x=region)) +
+fig3 <- ggplot(data=data, aes(y=unvote, x=region)) +
   geom_bar(stat = "identity", aes(fill = nb_electeurs)) + 
   scale_x_discrete(limits = rev(levels(data$region))) +
   coord_flip() +
@@ -101,4 +101,5 @@ ggplot(data=data, aes(y=unvote, x=region)) +
   ylim(-0.5, 1.25) +
   theme_minimal()
 
+ggsave("fig3.jpg", fig3, width = 20, height = 10, units = "cm")
 
